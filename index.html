@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Email Signature Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Signature Generator</h1>
+        <div class="generator-area">
+            <div class="input-form">
+                <h2>Your Information</h2>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="John Doe">
+
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" placeholder="Marketing Manager">
+
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" placeholder="Acme Inc.">
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" placeholder="+1 (123) 456-7890">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="john.doe@acme.com">
+
+                <label for="website">Website:</label>
+                <input type="url" id="website" placeholder="www.acme.com">
+
+                <h2>Company Logo</h2>
+                <input type="file" id="logoUpload" accept="image/*">
+                <img id="logoPreview" src="" alt="Logo Preview" style="max-width: 150px; display: none;">
+                <label for="logoWidth">Logo Width (px):</label>
+                <input type="number" id="logoWidth" value="100">
+
+                <h2>Social Media</h2>
+                <label for="linkedin">LinkedIn URL:</label>
+                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/johndoe">
+                <!-- Add more social media fields -->
+
+                <h2>Disclaimer / Custom Text (HTML Supported)</h2>
+                <textarea id="customText" rows="4" placeholder="Your custom message or disclaimer here. You can use HTML like <b>bold</b>."></textarea>
+
+                <button id="generateSignature">Generate Signature</button>
+            </div>
+
+            <div class="preview-area">
+                <h2>Signature Preview</h2>
+                <div id="signaturePreview" class="signature-box">
+                    <!-- Live generated signature will appear here -->
+                </div>
+
+                <h2>Output</h2>
+                <h3>HTML Version</h3>
+                <textarea id="htmlOutput" rows="10" readonly></textarea>
+                <button onclick="copyToClipboard('htmlOutput')">Copy HTML</button>
+
+                <h3>Plain Text Version</h3>
+                <textarea id="plainTextOutput" rows="10" readonly></textarea>
+                <button onclick="copyToClipboard('plainTextOutput')">Copy Plain Text</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
